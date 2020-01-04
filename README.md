@@ -60,7 +60,7 @@ public int[][] insert(int[][] intervals, int[] newInterval) {
         	} else if(newInterval[1] < interval[0]) {
         		merged.add(newInterval);
         		merged.add(interval);
-                newInterval = null;
+          newInterval = null;
         	} else {
         		newInterval[0] = Math.min(newInterval[0], interval[0]);
         		newInterval[1] = Math.max(newInterval[1], interval[1]);
@@ -68,7 +68,7 @@ public int[][] insert(int[][] intervals, int[] newInterval) {
         }
         
         if(newInterval != null)
-            merged.add(newInterval);
+           merged.add(newInterval);
         
         return merged.toArray(new int[merged.size()][]);
 }
