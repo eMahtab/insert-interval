@@ -58,8 +58,8 @@ public int[][] insert(int[][] intervals, int[] newInterval) {
         	if(newInterval == null || interval[1] < newInterval[0]) {
         		merged.add(interval);
         	} else if(newInterval[1] < interval[0]) {
-        		         merged.add(newInterval);
-        		         merged.add(interval);
+        		merged.add(newInterval);
+        		merged.add(interval);
                    newInterval = null;
         	} else {
         		newInterval[0] = Math.min(newInterval[0], interval[0]);
