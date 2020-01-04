@@ -75,3 +75,16 @@ public int[][] insert(int[][] intervals, int[] newInterval) {
         return merged.toArray(new int[merged.size()][]);
 }
 ```
+
+### Complexity Analysis
+
+**Time complexity : O(nlogn)**
+
+Other than the sort invocation, we do a simple linear scan of the list, so the runtime is dominated by the O(nlogn) complexity of sorting.
+
+**Space complexity : O(1) or O(n)**
+
+If we can sort intervals in place, we do not need more than constant additional space. Otherwise, we will require linear space.
+
+## References :
+https://www.youtube.com/watch?v=jeKvO1JS-4w
