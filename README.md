@@ -22,12 +22,16 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 **:exclamation: Note that intervals [1, 2] and [2, 3] are considered an overlap**
 
 ## Approach :
+#### Non Overlapping Scenarios
 Below are three cases where the newInterval doesn't overlap with any of the intervals.
 1. newInterval [5, 6] can be added after interval [3, 4]
 2. newInterval [3, 4] will sit, in between [1, 2] and [5, 6]
 3. newInterval [1, 2] will come before interval [3, 4]
 
 ![Insert Interval No Overlap Scenarios](insert-interval-no-overlap.PNG?raw=true "Insert Interval No Overlap Scenarios")
+
+#### Overlapping Scenarios
+![Insert Interval Overlap Scenarios](insert-interval-overlap.PNG?raw=true "Insert Interval Overlap Scenarios")
 
 ### Implementation
 
