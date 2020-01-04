@@ -35,12 +35,19 @@ newInterval can overlap with one or more than one intervals, as shown in example
 ![Insert Interval Overlap Scenarios](insert-interval-overlap.PNG?raw=true "Insert Interval Overlap Scenarios")
 
 **So how to solve this problem :worried:**
+
 Iterate over the sorted intervals and check the following conditions :
+
 1. If the start time of `newInterval` is greater than the end time of the current Interval then it means, there is no overlap and current Interval comes before the `newInterval`. So we add the current Interval to output list.
+
 2. Now if the above first condition is false, it means start time of the `newInterval` is less than or equal to end time of the current Interval. So we check if the end time of the `newInterval` is less than, start time of the current Interval, if thats the case, it means there is no overlap and `newInterval` comes before current Interval. So we first add `newInterval` to the output list and then we add the current Interval to the output list. And we set the `newInterval` to null since we inserted the `newInterval` to the output list. 
+
 3. If both first and second checks are false, then we are sure that `newInterval` overlaps with current Interval. Since the `newInterval` overlaps, we update the start and end time of the `newInterval` as follow
- i.  newInterval[0] = Math.min(newInterval[0], currentInterval[0])
- ii. newInterval[1] = Math.max(newInterval[1], currentInterval[1])
+
+ ```java 
+ newInterval[0] = Math.min(newInterval[0], currentInterval[0])
+ newInterval[1] = Math.max(newInterval[1], currentInterval[1])
+ ```
  
 ### Implementation
 
