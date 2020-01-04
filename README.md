@@ -49,6 +49,8 @@ Iterate over the sorted intervals and check the following conditions :
  newInterval[1] = Math.max(newInterval[1], currentInterval[1])
  ```
  
+**And finally after iterating over all the intervals, if `newInterval` is not null, it means `newInterval` comes after all the intervals, so we add the `newInterval` to the output list if `newInterval` is not null**
+ 
 ### Implementation
 
 ```java
